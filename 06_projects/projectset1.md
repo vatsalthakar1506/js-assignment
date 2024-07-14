@@ -9,5 +9,5 @@
 ## project 1
 
 ```javascript
-console.log("hitesh")
+console.log("vatsal")
  ````
