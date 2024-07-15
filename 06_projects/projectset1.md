@@ -6,7 +6,7 @@
 
 
 # Solution Code
-## project 1
+## project 1 solution code
 
 ```javascript
 const buttons = document.querySelectorAll('.button');
@@ -175,6 +175,38 @@ setInterval(function () {
       playGame = true;
     });
   }
+
+```
+## project 6 solution code
+
+```javascript 
+const start = document.getElementById('start');
+const stop = document.getElementById('stop');
+const body = document.querySelector('body');
+console.log(body);
+
+let interval;
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 10)];
+  }
+  return color;
+};
+function changeBgColor() {
+  body.style.backgroundColor = randomColor();
+}
+const startChangingColor = function () {
+  interval = setInterval(changeBgColor, 1000);
+};
+const stopChangingColor = function () {
+  clearInterval(interval);
+};
+start.addEventListener('click', startChangingColor);
+
+stop.addEventListener('click', stopChangingColor);
 
 ```
 
